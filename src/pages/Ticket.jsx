@@ -16,7 +16,7 @@ import { FaPlus } from "react-icons/fa";
 
 const customStyles = {
   content: {
-    width: "600px",
+    width: "75%",
     top: "50%",
     left: "50%",
     right: "auto",
@@ -86,12 +86,10 @@ const Ticket = () => {
     <div className="ticket-page">
       <header className="ticket-header">
         <BackButton url={"/tickets"} />
-        <h2>
-          Ticket ID: {ticket._id}
-          <span className={`status status-${ticket.status}`}>
-            {ticket.status}
-          </span>
-        </h2>
+        <h2>Ticket ID: {ticket._id}</h2>
+        <span className={`status status-${ticket.status}`}>
+          {ticket.status}
+        </span>
         <h3>
           Date Submitted: {new Date(ticket.createdAt).toLocaleString("en-us")}
         </h3>
